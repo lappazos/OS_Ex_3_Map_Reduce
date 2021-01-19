@@ -1,0 +1,42 @@
+lioraryepaz, omer_van
+Lior Paz (206240996), Omer Vandsburger (204153688)
+EX: 3
+
+FILES:
+README -- details + questions
+MapReduceFramework.cpp -- implementation os the provided header
+MultiThreadJob.h -- Class to manage the library
+MultiThreadJob.cpp -- Class to manage the library
+Makefile -- for the command make creates the library libuthreads.a
+
+REMARKS:
+WE KNOW THREADS :)
+
+ANSWERS:
+
+Part 1 Evaluation:
+CPUs - 4, 1 threads per core, 4 Cores per socket, cpu family 6 model 158, model name Intel(R) Core
+(TM) i5-7500, CPU 3.4 GHZ
+
+
+System -
+
+Graph explanation - Some of the tasks are heavier and requires high CPU time. as you activate less
+and less threads, some will have more than one heavy task, and processing power will be more
+sequential and not parallel.
+Flattening - at some point we will get runtime that match the longest mission.
+because there aren't a lot of inputs (58) probably won't be a change even with higher thread number
+because quickly they will reach waiting or finish.
+
+Part 2:
+
+Question 1:
+Same as the CPU cores amount, Since will save us overhead time of contex switch - like this, all
+threads will run in parallel.
+
+Question 2_a:
+2n. Main we create n threads, in foo each use "fork()" which creates a child process and thread.
+
+Question 2_b:
+parent will wait for child because of if, order of prints between the parents and children is
+unknown. so - (n!)^2
